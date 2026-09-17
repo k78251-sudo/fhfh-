@@ -46,7 +46,7 @@ export const Footer: React.FC<FooterProps> = ({
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-12 pb-24 md:pb-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
           {/* Brand & Mission (2 cols) */}
           <div className="lg:col-span-2 space-y-4">
@@ -179,25 +179,35 @@ export const Footer: React.FC<FooterProps> = ({
 
         {/* Bottom copyright and legal disclaimer */}
         <div className="pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="text-center sm:text-left">
+          <div className="text-center sm:text-left space-y-1">
             <p className="text-[11px] text-slate-400">
               © 2026 Empório das Utilidades — Catálogo Digital Demonstrativo. Todos os direitos reservados.
             </p>
-            <p className="text-[10px] text-slate-400 mt-0.5">
+            <p className="text-[10px] text-slate-500">
               Projeto sem fins comerciais com dados estritamente fictícios para fins de apresentação.
+            </p>
+            <p id="site-developer-signature" className="text-xs text-slate-300 font-medium pt-1">
+              Site desenvolvido por <span className="text-white font-semibold">nova</span>
             </p>
           </div>
 
           <button
             onClick={scrollToTop}
             id="footer-back-to-top-btn"
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 transition-colors cursor-pointer"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 transition-colors cursor-pointer shrink-0"
             aria-label="Voltar ao topo da página"
           >
             <span>Voltar ao topo</span>
             <ArrowUp className="w-3.5 h-3.5" />
           </button>
         </div>
+      </div>
+
+      {/* Dedicated Bottom Signature Bar */}
+      <div className="border-t border-slate-900 bg-slate-950 py-3.5 px-4 text-center">
+        <p id="site-developer-signature-bar" className="text-xs text-slate-400 font-medium">
+          Site desenvolvido por <span className="text-slate-200 font-semibold tracking-wide">nova</span>
+        </p>
       </div>
     </footer>
   );
