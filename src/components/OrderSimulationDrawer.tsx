@@ -98,7 +98,7 @@ export const OrderSimulationDrawer: React.FC<OrderSimulationDrawerProps> = ({
       ? `\n\n📝 *Observações / Dúvidas do Cliente:*\n"${notes.trim()}"`
       : '';
 
-    return `🛍️ *SIMULAÇÃO DE CONSULTA - EMPÓRIO DAS UTILIDADES*\n` +
+    return `🛍️ *SIMULAÇÃO DE CONSULTA - IMPÉRIO DAS UTILIDADES*\n` +
       `📦 Catálogo Digital de Demonstração\n` +
       `📅 Data/Hora: ${new Date().toLocaleDateString('pt-BR')} às ${new Date().toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' })}\n\n` +
       `*Itens Selecionados (${totalQuantity} ${totalQuantity === 1 ? 'unidade' : 'unidades'}):*\n\n` +
@@ -107,7 +107,7 @@ export const OrderSimulationDrawer: React.FC<OrderSimulationDrawerProps> = ({
       `${notesSection}\n\n` +
       `---\n` +
       `📱 *Simulação gerada para o número:* ${customerPhone || '[Não informado]'}\n` +
-      `⚠️ *Nota:* Esta é uma mensagem de simulação enviada para seu próprio WhatsApp demonstrando o fluxo de consulta de disponibilidade do Empório das Utilidades.`;
+      `⚠️ *Nota:* Esta é uma mensagem de simulação enviada para seu próprio WhatsApp demonstrando o fluxo de consulta de disponibilidade do Império das Utilidades.`;
   };
 
   const handleConsultWhatsApp = () => {

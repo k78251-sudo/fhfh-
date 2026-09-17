@@ -1,5 +1,5 @@
 {
-  "name": "Empório das Utilidades",
+  "name": "Império das Utilidades",
   "description": "Catálogo digital interativo para loja de utilidades domésticas, organização, limpeza e decoração.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]

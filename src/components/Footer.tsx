@@ -55,7 +55,7 @@ export const Footer: React.FC<FooterProps> = ({
                 <Store className="w-5 h-5" />
               </div>
               <span className="font-extrabold text-lg text-white tracking-tight">
-                Empório das Utilidades
+                Império das Utilidades
               </span>
             </div>
 
@@ -74,7 +74,7 @@ export const Footer: React.FC<FooterProps> = ({
                   href="#redes"
                   onClick={(e) => e.preventDefault()}
                   className="w-8 h-8 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white flex items-center justify-center transition-colors border border-slate-800"
-                  title="Instagram [@emporiodasutilidades.demo]"
+                  title="Instagram [@imperiodasutilidades.demo]"
                 >
                   <Instagram className="w-4 h-4" />
                 </a>
@@ -82,7 +82,7 @@ export const Footer: React.FC<FooterProps> = ({
                   href="#redes"
                   onClick={(e) => e.preventDefault()}
                   className="w-8 h-8 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white flex items-center justify-center transition-colors border border-slate-800"
-                  title="Facebook [/emporiodasutilidades.demo]"
+                  title="Facebook [/imperiodasutilidades.demo]"
                 >
                   <Facebook className="w-4 h-4" />
                 </a>
@@ -96,7 +96,7 @@ export const Footer: React.FC<FooterProps> = ({
                 </button>
               </div>
               <span className="text-[10px] text-slate-400 mt-1 block">
-                Instagram: [@emporiodasutilidades.demo]
+                Instagram: [@imperiodasutilidades.demo]
               </span>
             </div>
           </div>
@@ -128,7 +128,7 @@ export const Footer: React.FC<FooterProps> = ({
             <ul className="space-y-2">
               <li>
                 <a href="#diferenciais" className="hover:text-white transition-colors">
-                  Diferenciais do Empório
+                  Diferenciais do Império
                 </a>
               </li>
               <li>
@@ -181,7 +181,7 @@ export const Footer: React.FC<FooterProps> = ({
         <div className="pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="text-center sm:text-left space-y-1">
             <p className="text-[11px] text-slate-400">
-              © 2026 Empório das Utilidades — Catálogo Digital Demonstrativo. Todos os direitos reservados.
+              © 2026 Império das Utilidades — Catálogo Digital Demonstrativo. Todos os direitos reservados.
             </p>
             <p className="text-[10px] text-slate-500">
               Projeto sem fins comerciais com dados estritamente fictícios para fins de apresentação.

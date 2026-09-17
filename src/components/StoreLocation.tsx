@@ -115,7 +115,7 @@ export const StoreLocation: React.FC = () => {
                   <Store className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
                 <div className="mt-2 bg-slate-950 text-white text-[10px] sm:text-[11px] font-bold px-2.5 py-1 rounded-full shadow-md whitespace-nowrap">
-                  Empório das Utilidades
+                  Império das Utilidades
                 </div>
                 <span className="text-[9px] sm:text-[10px] text-slate-600 bg-white/90 px-2 py-0.5 rounded mt-1 font-mono border border-slate-200">
                   [Endereço Fictício]

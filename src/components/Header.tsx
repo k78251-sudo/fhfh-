@@ -62,7 +62,7 @@ export const Header: React.FC<HeaderProps> = ({
           <a
             href="#"
             className="flex items-center gap-2.5 group focus:outline-none"
-            aria-label="Empório das Utilidades"
+            aria-label="Império das Utilidades"
           >
             <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-orange-500 text-white flex items-center justify-center shadow-md shadow-orange-500/20 group-hover:bg-orange-600 transition-colors shrink-0">
               <Store className="w-5 h-5" />
@@ -70,7 +70,7 @@ export const Header: React.FC<HeaderProps> = ({
             <div>
               <div className="flex items-center gap-1.5">
                 <span className="font-extrabold text-base sm:text-xl tracking-tight text-slate-900">
-                  Empório<span className="text-orange-600">.</span>
+                  Império<span className="text-orange-600">.</span>
                 </span>
                 <span className="font-bold text-[10px] sm:text-xs uppercase tracking-wider px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200">
                   Utilidades

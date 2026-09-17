@@ -29,8 +29,8 @@ export const WhatsAppModal: React.FC<WhatsAppModalProps> = ({
 
   // Generate pre-filled message
   const generatedMessage = product
-    ? `Olá! Estava navegando no catálogo digital do Empório das Utilidades e tenho interesse no item:\n\n📦 Produto: ${product.name}\n🔖 Ref: ${product.refCode}\n💰 Preço de Catálogo: ${formatBRL(product.price)}\n\nPoderiam me confirmar se está disponível para pronta-entrega ou retirada na loja? Obrigado!`
-    : `Olá! Estava navegando no catálogo digital do Empório das Utilidades e gostaria de tirar uma dúvida sobre ${
+    ? `Olá! Estava navegando no catálogo digital do Império das Utilidades e tenho interesse no item:\n\n📦 Produto: ${product.name}\n🔖 Ref: ${product.refCode}\n💰 Preço de Catálogo: ${formatBRL(product.price)}\n\nPoderiam me confirmar se está disponível para pronta-entrega ou retirada na loja? Obrigado!`
+    : `Olá! Estava navegando no catálogo digital do Império das Utilidades e gostaria de tirar uma dúvida sobre ${
         customTopic || 'produtos e disponibilidade'
       }. Poderiam me atender? Obrigado!`;
 

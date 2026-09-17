@@ -39,7 +39,7 @@ export const Differentials: React.FC = () => {
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
           <span className="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-orange-600 mb-1.5 block">
-            Por que escolher o Empório
+            Por que escolher o Império
           </span>
           <h2 className="text-xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
             A conveniência do digital com o carinho do comércio de bairro
