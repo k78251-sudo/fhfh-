@@ -33,10 +33,10 @@ export const Header: React.FC<HeaderProps> = ({
   return (
     <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-xs">
       {/* Top micro announcement bar */}
-      <div className="bg-slate-900 text-slate-200 text-xs py-1.5 px-3.5 sm:px-4">
+      <div className="bg-black text-slate-200 text-xs py-1.5 px-3.5 sm:px-4 border-b border-slate-900">
         <div className="max-w-7xl mx-auto flex items-center justify-between gap-2">
           <div className="flex items-center gap-2 truncate">
-            <span className="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-orange-600 text-white uppercase tracking-wider shrink-0">
+            <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-blue-600 text-white shrink-0">
               Catálogo
             </span>
             <span className="truncate text-[11px] sm:text-xs text-slate-300">
@@ -48,7 +48,7 @@ export const Header: React.FC<HeaderProps> = ({
               <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
               Preços atualizados
             </span>
-            <span className="text-amber-400/90 text-[10px] sm:text-[11px] font-semibold">
+            <span className="text-sky-300 text-[10px] sm:text-[11px] font-semibold">
               Demonstração
             </span>
           </div>
@@ -64,20 +64,20 @@ export const Header: React.FC<HeaderProps> = ({
             className="flex items-center gap-2.5 group focus:outline-none"
             aria-label="Império das Utilidades"
           >
-            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-orange-500 text-white flex items-center justify-center shadow-md shadow-orange-500/20 group-hover:bg-orange-600 transition-colors shrink-0">
+            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center shadow-sm group-hover:bg-blue-700 transition-colors shrink-0">
               <Store className="w-5 h-5" />
             </div>
             <div>
               <div className="flex items-center gap-1.5">
                 <span className="font-extrabold text-base sm:text-xl tracking-tight text-slate-900">
-                  Império<span className="text-orange-600">.</span>
+                  Império<span className="text-blue-600">.</span>
                 </span>
-                <span className="font-bold text-[10px] sm:text-xs uppercase tracking-wider px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200">
+                <span className="font-bold text-xs px-2 py-0.5 rounded bg-black text-white border border-slate-900 shadow-2xs">
                   Utilidades
                 </span>
               </div>
               <p className="text-[10px] sm:text-[11px] text-slate-500 font-medium -mt-0.5 hidden xs:block">
-                Tudo para equipar e organizar seu lar
+                Panelas, potes herméticos, caixas com travas e utilidades
               </p>
             </div>
           </a>
@@ -88,13 +88,13 @@ export const Header: React.FC<HeaderProps> = ({
             <button
               onClick={onOpenSimulation}
               id="mobile-header-list-btn"
-              className="relative flex items-center gap-1.5 px-3 py-2 text-xs font-bold text-slate-800 bg-orange-50 active:bg-orange-100 border border-orange-200 rounded-xl transition-colors cursor-pointer min-h-[40px]"
+              className="relative flex items-center gap-1.5 px-3 py-2 text-xs font-bold text-slate-800 bg-blue-50 active:bg-blue-100 border border-blue-200 rounded-xl transition-colors cursor-pointer min-h-[40px]"
               aria-label="Ver lista de consulta"
             >
-              <ClipboardList className="w-4 h-4 text-orange-600" />
+              <ClipboardList className="w-4 h-4 text-blue-600" />
               <span>Lista</span>
               {simulationItemsCount > 0 && (
-                <span className="w-5 h-5 rounded-full bg-orange-600 text-white text-[10px] font-bold flex items-center justify-center">
+                <span className="w-5 h-5 rounded-full bg-blue-600 text-white text-[10px] font-bold flex items-center justify-center">
                   {simulationItemsCount}
                 </span>
               )}
@@ -127,7 +127,7 @@ export const Header: React.FC<HeaderProps> = ({
                 }
               }}
               placeholder="Buscar produtos (ex: potes, mop, organizador)..."
-              className="w-full pl-9 pr-9 py-2 sm:py-2 text-base sm:text-sm bg-slate-50 hover:bg-slate-100/80 focus:bg-white border border-slate-200 rounded-xl text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all shadow-2xs min-h-[42px] sm:min-h-auto"
+              className="w-full pl-9 pr-9 py-2 sm:py-2 text-base sm:text-sm bg-slate-50 hover:bg-slate-100/80 focus:bg-white border border-slate-200 rounded-xl text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all shadow-2xs min-h-[42px] sm:min-h-auto"
             />
             {searchTerm && (
               <button
@@ -148,12 +148,12 @@ export const Header: React.FC<HeaderProps> = ({
           <button
             onClick={onOpenSimulation}
             id="desktop-header-list-btn"
-            className="relative flex items-center gap-2.5 px-3.5 py-2 text-xs font-semibold text-slate-800 bg-slate-100 hover:bg-orange-50 hover:border-orange-300 border border-slate-200 rounded-xl shadow-2xs transition-all cursor-pointer group"
+            className="relative flex items-center gap-2.5 px-3.5 py-2 text-xs font-semibold text-slate-800 bg-slate-100 hover:bg-blue-50 hover:border-blue-300 border border-slate-200 rounded-xl shadow-2xs transition-all cursor-pointer group"
           >
             <div className="relative">
-              <ClipboardList className="w-4 h-4 text-orange-600 group-hover:scale-110 transition-transform" />
+              <ClipboardList className="w-4 h-4 text-blue-600 group-hover:scale-110 transition-transform" />
               {simulationItemsCount > 0 && (
-                <span className="absolute -top-1.5 -right-1.5 w-4 h-4 rounded-full bg-orange-600 text-white text-[10px] font-bold flex items-center justify-center">
+                <span className="absolute -top-1.5 -right-1.5 w-4 h-4 rounded-full bg-blue-600 text-white text-[10px] font-bold flex items-center justify-center">
                   {simulationItemsCount}
                 </span>
               )}
@@ -189,7 +189,7 @@ export const Header: React.FC<HeaderProps> = ({
         className="border-t border-slate-100 bg-slate-50/70 overflow-x-auto scrollbar-none touch-pan-x"
       >
         <div className="max-w-7xl mx-auto px-3.5 sm:px-6 flex items-center gap-1.5 py-1.5 text-xs font-medium whitespace-nowrap">
-          <span className="text-slate-400 text-[11px] font-semibold uppercase tracking-wider mr-1 hidden sm:inline">
+          <span className="text-slate-500 text-xs font-medium mr-1 hidden sm:inline">
             Seções:
           </span>
           <button
@@ -200,7 +200,7 @@ export const Header: React.FC<HeaderProps> = ({
             id="nav-category-todos"
             className={`px-3 py-1.5 rounded-lg transition-colors cursor-pointer ${
               selectedCategory === 'todos'
-                ? 'bg-orange-600 text-white font-semibold shadow-2xs'
+                ? 'bg-blue-600 text-white font-semibold shadow-2xs'
                 : 'text-slate-600 hover:text-slate-900 hover:bg-slate-200/70'
             }`}
           >
@@ -216,7 +216,7 @@ export const Header: React.FC<HeaderProps> = ({
               id={`nav-category-${cat.slug}`}
               className={`px-3 py-1.5 rounded-lg transition-colors cursor-pointer ${
                 selectedCategory === cat.slug
-                  ? 'bg-orange-600 text-white font-semibold shadow-2xs'
+                  ? 'bg-blue-600 text-white font-semibold shadow-2xs'
                   : 'text-slate-600 hover:text-slate-900 hover:bg-slate-200/70'
               }`}
             >

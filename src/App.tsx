@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { CATEGORIES, PRODUCTS } from './data/products';
 import { Product, SimulationItem } from './types';
 import { Header } from './components/Header';
+import { RotatingBanner } from './components/RotatingBanner';
 import { Hero } from './components/Hero';
 import { CategoriesGrid } from './components/CategoriesGrid';
 import { CatalogSection } from './components/CatalogSection';
@@ -88,6 +89,11 @@ export default function App() {
     }
   };
 
+  const handleBannerSelectCategory = (slug: string) => {
+    setSelectedCategory(slug);
+    scrollToCatalog();
+  };
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -99,7 +105,7 @@ export default function App() {
     : null;
 
   return (
-    <div className="min-h-screen bg-slate-50 flex flex-col selection:bg-orange-500 selection:text-white pb-16 md:pb-0">
+    <div className="min-h-screen bg-slate-50 flex flex-col selection:bg-blue-600 selection:text-white pb-16 md:pb-0">
       {/* 1. Header with search, category shortcuts and Minha Lista */}
       <Header
         searchTerm={searchTerm}
@@ -113,6 +119,13 @@ export default function App() {
       />
 
       <main className="flex-1">
+        {/* Top Rotating Carousel Banner with 3 Images */}
+        <RotatingBanner
+          onSelectCategory={handleBannerSelectCategory}
+          onOpenWhatsApp={() => handleGeneralWhatsApp()}
+          onOpenSimulation={() => setIsSimulationOpen(true)}
+        />
+
         {/* 2. Hero Section */}
         <Hero
           onExploreClick={scrollToCatalog}
@@ -210,11 +223,11 @@ export default function App() {
             onClick={() => setIsSimulationOpen(true)}
             id="floating-simulation-list-btn"
             aria-label="Abrir lista de simulação"
-            className="flex items-center gap-2.5 px-4 py-2.5 rounded-full bg-orange-600 hover:bg-orange-700 active:bg-orange-800 text-white font-bold text-xs sm:text-sm shadow-xl hover:shadow-2xl hover:scale-105 active:scale-100 transition-all cursor-pointer group animate-in slide-in-from-bottom-2"
+            className="flex items-center gap-2.5 px-4 py-2.5 rounded-full bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white font-bold text-xs sm:text-sm shadow-xl hover:shadow-2xl hover:scale-105 active:scale-100 transition-all cursor-pointer group animate-in slide-in-from-bottom-2"
           >
             <div className="relative">
               <ClipboardList className="w-4 h-4 text-white" />
-              <span className="absolute -top-1.5 -right-2 w-4 h-4 bg-white text-orange-700 text-[10px] font-extrabold rounded-full flex items-center justify-center shadow-xs">
+              <span className="absolute -top-1.5 -right-2 w-4 h-4 bg-white text-blue-700 text-[10px] font-extrabold rounded-full flex items-center justify-center shadow-xs">
                 {totalSimulationCount}
               </span>
             </div>
@@ -231,8 +244,8 @@ export default function App() {
         >
           <div className="relative">
             <MessageCircle className="w-5 h-5 fill-white" />
-            <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-amber-400 rounded-full animate-ping" />
-            <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-amber-400 rounded-full" />
+            <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-emerald-300 rounded-full animate-ping" />
+            <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-emerald-300 rounded-full" />
           </div>
           <span>WhatsApp [Telefone]</span>
         </button>

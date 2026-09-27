@@ -79,8 +79,8 @@ export const WhatsAppSection: React.FC<WhatsAppSectionProps> = ({
             {/* Right Col: Interactive consultation box (5 cols) */}
             <div className="lg:col-span-5 bg-white text-slate-800 p-4 sm:p-7 rounded-2xl shadow-xl border border-white/20">
               <div className="flex items-center gap-3 pb-3 sm:pb-4 border-b border-slate-100">
-                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-xs sm:text-sm shrink-0">
-                  EU
+                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-black text-white flex items-center justify-center font-extrabold text-xs sm:text-sm shrink-0 shadow-xs tracking-wider">
+                  IU
                 </div>
                 <div>
                   <h3 className="font-bold text-xs sm:text-sm text-slate-900">
@@ -93,7 +93,7 @@ export const WhatsAppSection: React.FC<WhatsAppSectionProps> = ({
               </div>
 
               <div className="py-3 sm:py-4 space-y-2">
-                <p className="text-[11px] sm:text-xs font-bold text-slate-700 uppercase tracking-wide">
+                <p className="text-xs font-semibold text-slate-700">
                   Selecione o assunto da sua mensagem:
                 </p>
                 <div className="space-y-1.5">

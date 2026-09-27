@@ -8,7 +8,7 @@ export const StoreLocation: React.FC = () => {
         {/* Section Title */}
         <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-200/70 text-slate-700 text-[11px] sm:text-xs font-semibold mb-2">
-            <Store className="w-3.5 h-3.5 text-orange-600" />
+            <Store className="w-3.5 h-3.5 text-blue-600" />
             <span>Estrutura Física Fictícia</span>
           </div>
           <h2 className="text-xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
@@ -34,7 +34,7 @@ export const StoreLocation: React.FC = () => {
             <div>
               {/* Address */}
               <div className="flex items-start gap-3 mb-4 sm:mb-6">
-                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-orange-100 text-orange-600 flex items-center justify-center shrink-0">
+                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center shrink-0">
                   <MapPin className="w-4 h-4 sm:w-5 sm:h-5" />
                 </div>
                 <div>
@@ -55,8 +55,8 @@ export const StoreLocation: React.FC = () => {
 
               {/* Hours */}
               <div className="flex items-start gap-3 mb-4 sm:mb-6">
-                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center shrink-0">
-                  <Clock className="w-4 h-4 sm:w-5 sm:h-5" />
+                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-black text-white flex items-center justify-center shrink-0 shadow-xs">
+                  <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-sky-400" />
                 </div>
                 <div className="flex-1">
                   <h3 className="font-bold text-slate-900 text-xs sm:text-sm mb-1.5 sm:mb-2">
@@ -111,7 +111,7 @@ export const StoreLocation: React.FC = () => {
               <div className="absolute h-full w-4 bg-slate-300 left-1/2 -translate-x-1/2 transform rotate-6" />
 
               <div className="relative z-10 flex flex-col items-center">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-orange-600 text-white flex items-center justify-center shadow-lg">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-blue-600 text-white flex items-center justify-center shadow-lg">
                   <Store className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
                 <div className="mt-2 bg-slate-950 text-white text-[10px] sm:text-[11px] font-bold px-2.5 py-1 rounded-full shadow-md whitespace-nowrap">
@@ -129,7 +129,7 @@ export const StoreLocation: React.FC = () => {
 
             <div className="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500">
               <span className="flex items-center gap-1.5">
-                <Navigation className="w-3.5 h-3.5 text-orange-600 shrink-0" />
+                <Navigation className="w-3.5 h-3.5 text-blue-600 shrink-0" />
                 Rota ilustrativa
               </span>
               <span className="font-semibold text-slate-700">[Cidade - UF]</span>

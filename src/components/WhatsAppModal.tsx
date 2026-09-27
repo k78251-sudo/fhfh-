@@ -114,7 +114,7 @@ export const WhatsAppModal: React.FC<WhatsAppModalProps> = ({
                 <h4 className="font-bold text-xs sm:text-sm text-slate-900 truncate">
                   {product.name}
                 </h4>
-                <p className="text-xs font-extrabold text-orange-600 mt-0.5">
+                <p className="text-xs font-extrabold text-blue-600 mt-0.5">
                   {formatBRL(product.price)}
                 </p>
               </div>

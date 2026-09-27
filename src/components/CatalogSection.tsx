@@ -12,7 +12,6 @@ import {
   List,
   Filter,
   ClipboardList,
-  ArrowRight,
 } from 'lucide-react';
 import { Product, Category, SimulationItem } from '../types';
 import { ProductCard } from './ProductCard';
@@ -110,24 +109,23 @@ export const CatalogSection: React.FC<CatalogSectionProps> = ({
   return (
     <section id="catalogo-produtos" className="py-10 sm:py-16 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        {/* Banner informing items in simulation list if any */}
+        {/* Banner informando itens na lista de consulta */}
         {totalInList > 0 && (
-          <div className="mb-6 p-3 sm:p-4 bg-orange-600 text-white rounded-2xl shadow-md flex items-center justify-between gap-3 animate-in fade-in">
+          <div className="mb-6 p-3 sm:p-4 bg-blue-600 text-white rounded-2xl shadow-sm flex items-center justify-between gap-3">
             <div className="flex items-center gap-2.5 truncate">
               <div className="w-8 h-8 rounded-lg bg-white/20 flex items-center justify-center shrink-0">
                 <ClipboardList className="w-4 h-4" />
               </div>
               <p className="text-xs sm:text-sm font-semibold truncate">
-                Você tem <strong>{totalInList} {totalInList === 1 ? 'item' : 'itens'}</strong> na sua lista de consulta
+                Você tem <strong>{totalInList} {totalInList === 1 ? 'item selecionado' : 'itens selecionados'}</strong> para cotação
               </p>
             </div>
             <button
               type="button"
               onClick={onOpenSimulationList}
-              className="px-3.5 py-1.5 rounded-xl bg-white text-orange-700 font-bold text-xs hover:bg-orange-50 transition-colors shrink-0 flex items-center gap-1.5 shadow-2xs cursor-pointer"
+              className="px-3.5 py-1.5 rounded-xl bg-black hover:bg-slate-900 text-white font-bold text-xs transition-colors shrink-0 shadow-xs cursor-pointer border border-slate-900"
             >
-              <span>Ver Lista & Simular</span>
-              <ArrowRight className="w-3.5 h-3.5" />
+              Conferir lista e simular
             </button>
           </div>
         )}
@@ -135,22 +133,18 @@ export const CatalogSection: React.FC<CatalogSectionProps> = ({
         {/* Section Header */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-6 sm:mb-8 gap-4">
           <div>
-            <div className="flex items-center gap-2 mb-1">
-              <span className="text-xs font-bold uppercase tracking-wider text-orange-600">
-                Catálogo Digital
-              </span>
-              <span className="text-slate-300">•</span>
-              <span className="text-xs text-slate-500 font-medium">
-                {filteredProducts.length} itens encontrados
-              </span>
+            <div className="flex items-center gap-2 mb-1 text-xs text-slate-600 font-medium">
+              <span>Catálogo de Balcão</span>
+              <span>•</span>
+              <span>{filteredProducts.length} itens encontrados</span>
             </div>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
               {selectedCategory === 'todos'
                 ? 'Todos os Produtos'
                 : categories.find((c) => c.slug === selectedCategory)?.name || 'Produtos'}
             </h2>
-            <p className="text-xs sm:text-sm text-slate-500 mt-1">
-              Adicione os itens desejados à lista e simule sua consulta de disponibilidade pelo WhatsApp
+            <p className="text-xs sm:text-sm text-slate-600 mt-1">
+              Consulte medidas, valores à vista e adicione à lista para enviar ao WhatsApp da loja
             </p>
           </div>
 
@@ -158,9 +152,9 @@ export const CatalogSection: React.FC<CatalogSectionProps> = ({
           <div className="hidden lg:flex items-center gap-2">
             <button
               onClick={() => setBadgeFilter('all')}
-              className={`px-3 py-1.5 text-xs font-medium rounded-xl transition-all cursor-pointer ${
+              className={`px-3 py-1.5 text-xs font-semibold rounded-xl transition-all cursor-pointer ${
                 badgeFilter === 'all'
-                  ? 'bg-slate-900 text-white shadow-2xs'
+                  ? 'bg-black text-white shadow-2xs'
                   : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'
               }`}
             >
@@ -170,11 +164,11 @@ export const CatalogSection: React.FC<CatalogSectionProps> = ({
               onClick={() => setBadgeFilter('Mais Vendido')}
               className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-xl transition-all cursor-pointer ${
                 badgeFilter === 'Mais Vendido'
-                  ? 'bg-orange-600 text-white shadow-2xs'
+                  ? 'bg-blue-600 text-white shadow-2xs'
                   : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'
               }`}
             >
-              <Flame className="w-3.5 h-3.5 text-orange-500" />
+              <Flame className="w-3.5 h-3.5 text-sky-300" />
               <span>Mais Vendidos</span>
             </button>
             <button
@@ -213,7 +207,7 @@ export const CatalogSection: React.FC<CatalogSectionProps> = ({
                   value={selectedCategory}
                   onChange={(e) => onSelectCategory(e.target.value)}
                   id="catalog-category-select"
-                  className="w-full text-xs font-semibold py-2 px-3 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-xl text-slate-800 focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all appearance-none cursor-pointer pr-8"
+                  className="w-full text-xs font-semibold py-2 px-3 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-xl text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all appearance-none cursor-pointer pr-8"
                 >
                   <option value="todos">Todas as Categorias ({products.length})</option>
                   {categories.map((c) => (
@@ -249,10 +243,10 @@ export const CatalogSection: React.FC<CatalogSectionProps> = ({
                 id="open-mobile-filter-sheet-btn"
                 className="lg:hidden flex items-center gap-1.5 px-3 py-2 bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-semibold rounded-xl transition-colors cursor-pointer"
               >
-                <Filter className="w-3.5 h-3.5 text-orange-600" />
+                <Filter className="w-3.5 h-3.5 text-blue-600" />
                 <span>Filtros</span>
                 {activeFiltersCount > 0 && (
-                  <span className="w-4 h-4 rounded-full bg-orange-600 text-white text-[10px] font-bold flex items-center justify-center">
+                  <span className="w-4 h-4 rounded-full bg-blue-600 text-white text-[10px] font-bold flex items-center justify-center">
                     {activeFiltersCount}
                   </span>
                 )}
@@ -265,8 +259,8 @@ export const CatalogSection: React.FC<CatalogSectionProps> = ({
                   onClick={() => setLayoutMode('grid')}
                   className={`p-1.5 rounded-lg transition-colors cursor-pointer ${
                     layoutMode === 'grid'
-                      ? 'bg-white text-slate-900 shadow-2xs'
-                      : 'text-slate-500 hover:text-slate-800'
+                      ? 'bg-black text-white shadow-2xs'
+                      : 'text-slate-500 hover:text-black'
                   }`}
                   aria-label="Modo Grade"
                   title="Visualização em Grade"
@@ -278,8 +272,8 @@ export const CatalogSection: React.FC<CatalogSectionProps> = ({
                   onClick={() => setLayoutMode('list')}
                   className={`p-1.5 rounded-lg transition-colors cursor-pointer ${
                     layoutMode === 'list'
-                      ? 'bg-white text-slate-900 shadow-2xs'
-                      : 'text-slate-500 hover:text-slate-800'
+                      ? 'bg-black text-white shadow-2xs'
+                      : 'text-slate-500 hover:text-black'
                   }`}
                   aria-label="Modo Lista"
                   title="Visualização em Lista"
@@ -295,7 +289,7 @@ export const CatalogSection: React.FC<CatalogSectionProps> = ({
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value as any)}
                   id="catalog-sort-select"
-                  className="text-xs font-semibold py-1.5 px-2 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-lg text-slate-800 focus:outline-none focus:ring-2 focus:ring-orange-500/20 transition-all cursor-pointer"
+                  className="text-xs font-semibold py-1.5 px-2 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-lg text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all cursor-pointer"
                 >
                   <option value="relevance">Relevância</option>
                   <option value="price-asc">Menor Preço</option>
@@ -308,13 +302,13 @@ export const CatalogSection: React.FC<CatalogSectionProps> = ({
 
         {/* Active search message */}
         {searchTerm && (
-          <div className="mb-4 sm:mb-6 px-3.5 py-2.5 bg-orange-50 border border-orange-200 rounded-xl flex items-center justify-between text-xs text-orange-900">
+          <div className="mb-4 sm:mb-6 px-3.5 py-2.5 bg-blue-50 border border-blue-200 rounded-xl flex items-center justify-between text-xs text-blue-900">
             <span className="truncate mr-2">
               Filtrando por: <strong>&ldquo;{searchTerm}&rdquo;</strong>
             </span>
             <button
               onClick={() => onSearchChange('')}
-              className="text-orange-700 font-semibold hover:underline cursor-pointer shrink-0 text-xs"
+              className="text-blue-700 font-semibold hover:underline cursor-pointer shrink-0 text-xs"
             >
               Limpar busca
             </button>
@@ -356,14 +350,14 @@ export const CatalogSection: React.FC<CatalogSectionProps> = ({
                 <div className="flex items-center gap-2 w-full sm:w-auto">
                   <button
                     onClick={() => setVisibleCount((prev) => prev + 16)}
-                    className="flex-1 sm:flex-initial px-4 py-3 sm:py-2.5 bg-orange-600 hover:bg-orange-700 active:bg-orange-800 text-white font-semibold text-xs rounded-xl shadow-xs transition-colors flex items-center justify-center gap-2 cursor-pointer min-h-[44px]"
+                    className="flex-1 sm:flex-initial px-4 py-3 sm:py-2.5 bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white font-semibold text-xs rounded-xl shadow-xs transition-colors flex items-center justify-center gap-2 cursor-pointer min-h-[44px]"
                   >
                     <Package className="w-3.5 h-3.5" />
                     <span>Carregar mais 16</span>
                   </button>
                   <button
                     onClick={() => setVisibleCount(filteredProducts.length)}
-                    className="px-3.5 py-3 sm:py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 hover:text-slate-900 font-semibold text-xs rounded-xl transition-colors cursor-pointer whitespace-nowrap min-h-[44px]"
+                    className="px-3.5 py-3 sm:py-2.5 bg-black hover:bg-slate-900 active:bg-slate-950 text-white font-semibold text-xs rounded-xl shadow-xs transition-colors cursor-pointer whitespace-nowrap min-h-[44px]"
                   >
                     Ver todos ({filteredProducts.length})
                   </button>
@@ -385,7 +379,7 @@ export const CatalogSection: React.FC<CatalogSectionProps> = ({
             </p>
             <button
               onClick={resetFilters}
-              className="px-5 py-2.5 bg-orange-600 hover:bg-orange-700 text-white text-xs font-semibold rounded-xl shadow-xs transition-colors cursor-pointer min-h-[42px]"
+              className="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold rounded-xl shadow-xs transition-colors cursor-pointer min-h-[42px]"
             >
               Exibir todo o catálogo
             </button>

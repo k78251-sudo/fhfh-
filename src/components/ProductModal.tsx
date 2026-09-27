@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, Check, Box, Ruler, ShieldCheck, Plus, Minus, ListPlus, ClipboardList } from 'lucide-react';
+import { X, Check, Box, Ruler, ShieldCheck, Plus, Minus, ShoppingCart, ClipboardList } from 'lucide-react';
 import { Product } from '../types';
 
 interface ProductModalProps {
@@ -54,13 +54,13 @@ export const ProductModal: React.FC<ProductModalProps> = ({
         {/* Header */}
         <div className="px-4 sm:px-5 py-3 border-b border-slate-200 flex items-center justify-between bg-slate-50">
           <div className="flex items-center gap-2 truncate">
-            <span className="text-xs font-bold text-orange-600 uppercase tracking-wider">
+            <span className="text-xs font-semibold text-blue-700">
               {product.category}
             </span>
             <span className="text-slate-300">•</span>
             <span className="text-xs font-mono text-slate-500">Ref: {product.refCode}</span>
             {inListQuantity > 0 && (
-              <span className="text-[11px] bg-orange-100 text-orange-800 font-bold px-2 py-0.5 rounded-full">
+              <span className="text-[11px] bg-blue-100 text-blue-800 font-bold px-2 py-0.5 rounded-full">
                 {inListQuantity} na lista
               </span>
             )}
@@ -90,7 +90,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({
                 }}
               />
               {product.badge && (
-                <span className="absolute top-3 left-3 bg-orange-600 text-white text-[11px] font-bold px-2.5 py-1 rounded-md shadow-xs">
+                <span className="absolute top-3 left-3 bg-blue-600 text-white text-[11px] font-bold px-2.5 py-1 rounded-md shadow-xs">
                   {product.badge}
                 </span>
               )}
@@ -103,7 +103,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({
                   <Check className="w-4 h-4" />
                   <span>Disponível no catálogo</span>
                 </div>
-                <h3 className="text-lg sm:text-xl font-bold text-slate-900 leading-tight">
+                <h3 className="font-product-title text-lg sm:text-xl leading-snug">
                   {product.name}
                 </h3>
               </div>
@@ -146,7 +146,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({
 
           {/* Description & Features */}
           <div className="border-t border-slate-100 pt-4 space-y-2.5">
-            <h4 className="text-xs sm:text-sm font-bold text-slate-900 uppercase tracking-wider text-slate-400">
+            <h4 className="text-xs sm:text-sm font-semibold text-slate-800">
               Descrição do Produto
             </h4>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
@@ -155,13 +155,13 @@ export const ProductModal: React.FC<ProductModalProps> = ({
 
             {product.features && product.features.length > 0 && (
               <div className="pt-2">
-                <h5 className="text-[11px] font-bold text-slate-800 uppercase tracking-wide mb-2">
-                  Destaques:
+                <h5 className="text-xs font-semibold text-slate-800 mb-2">
+                  Especificações:
                 </h5>
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-600">
                   {product.features.map((feat, idx) => (
                     <li key={idx} className="flex items-center gap-2">
-                      <ShieldCheck className="w-3.5 h-3.5 text-orange-600 shrink-0" />
+                      <ShieldCheck className="w-3.5 h-3.5 text-blue-600 shrink-0" />
                       <span>{feat}</span>
                     </li>
                   ))}
@@ -211,18 +211,18 @@ export const ProductModal: React.FC<ProductModalProps> = ({
               className={`flex-1 sm:flex-none px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-xs transition-colors cursor-pointer min-h-[46px] ${
                 added
                   ? 'bg-emerald-600 text-white'
-                  : 'bg-orange-600 hover:bg-orange-700 active:bg-orange-800 text-white'
+                  : 'bg-[#0b1329] hover:bg-black active:bg-slate-900 text-white'
               }`}
             >
               {added ? (
                 <>
-                  <Check className="w-4 h-4" />
-                  <span>Adicionado à lista!</span>
+                  <Check className="w-4 h-4 stroke-[2.5]" />
+                  <span>Adicionado ao carrinho!</span>
                 </>
               ) : (
                 <>
-                  <ListPlus className="w-4 h-4" />
-                  <span>Adicionar à lista ({qty})</span>
+                  <ShoppingCart className="w-4 h-4 stroke-[2.2]" />
+                  <span>Adicionar ao carrinho ({qty})</span>
                 </>
               )}
             </button>

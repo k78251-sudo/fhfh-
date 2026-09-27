@@ -28,7 +28,7 @@ export const MobileBottomBar: React.FC<MobileBottomBarProps> = ({
         <button
           onClick={onGoHome}
           id="mobile-bottom-nav-home"
-          className="flex flex-col items-center justify-center h-full text-slate-600 active:text-orange-600 transition-colors group cursor-pointer"
+          className="flex flex-col items-center justify-center h-full text-slate-600 active:text-blue-600 transition-colors group cursor-pointer"
         >
           <Home className="w-5 h-5 transition-transform group-active:scale-90" />
           <span className="text-[10px] font-semibold tracking-tight mt-0.5 whitespace-nowrap">
@@ -40,7 +40,7 @@ export const MobileBottomBar: React.FC<MobileBottomBarProps> = ({
         <button
           onClick={onOpenCategories}
           id="mobile-bottom-nav-categories"
-          className="flex flex-col items-center justify-center h-full text-slate-600 active:text-orange-600 transition-colors group cursor-pointer"
+          className="flex flex-col items-center justify-center h-full text-slate-600 active:text-blue-600 transition-colors group cursor-pointer"
         >
           <Boxes className="w-5 h-5 transition-transform group-active:scale-90" />
           <span className="text-[10px] font-semibold tracking-tight mt-0.5 whitespace-nowrap">
@@ -52,7 +52,7 @@ export const MobileBottomBar: React.FC<MobileBottomBarProps> = ({
         <button
           onClick={onGoCatalog}
           id="mobile-bottom-nav-catalog"
-          className="flex flex-col items-center justify-center h-full text-slate-600 active:text-orange-600 transition-colors group cursor-pointer relative"
+          className="flex flex-col items-center justify-center h-full text-slate-600 active:text-blue-600 transition-colors group cursor-pointer relative"
         >
           <div className="relative">
             <Package className="w-5 h-5 transition-transform group-active:scale-90" />
@@ -66,17 +66,17 @@ export const MobileBottomBar: React.FC<MobileBottomBarProps> = ({
         <button
           onClick={onOpenSimulation}
           id="mobile-bottom-nav-simulation"
-          className="flex flex-col items-center justify-center h-full text-slate-600 active:text-orange-600 transition-colors group cursor-pointer relative"
+          className="flex flex-col items-center justify-center h-full text-slate-600 active:text-blue-600 transition-colors group cursor-pointer relative"
         >
           <div className="relative">
-            <ClipboardList className="w-5 h-5 text-orange-600 transition-transform group-active:scale-90" />
+            <ClipboardList className="w-5 h-5 text-blue-600 transition-transform group-active:scale-90" />
             {simulationItemsCount > 0 && (
-              <span className="absolute -top-1.5 -right-2.5 min-w-4 h-4 px-1 rounded-full bg-orange-600 text-white text-[9px] font-extrabold flex items-center justify-center shadow-xs">
+              <span className="absolute -top-1.5 -right-2.5 min-w-4 h-4 px-1 rounded-full bg-blue-600 text-white text-[9px] font-extrabold flex items-center justify-center shadow-xs">
                 {simulationItemsCount}
               </span>
             )}
           </div>
-          <span className="text-[10px] font-bold text-orange-700 tracking-tight mt-0.5 whitespace-nowrap">
+          <span className="text-[10px] font-bold text-blue-700 tracking-tight mt-0.5 whitespace-nowrap">
             Minha Lista
           </span>
         </button>

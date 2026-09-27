@@ -51,7 +51,7 @@ export const Footer: React.FC<FooterProps> = ({
           {/* Brand & Mission (2 cols) */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center gap-2.5">
-              <div className="w-9 h-9 rounded-xl bg-orange-600 text-white flex items-center justify-center shadow-md shadow-orange-600/20">
+              <div className="w-9 h-9 rounded-xl bg-blue-600 text-white flex items-center justify-center shadow-md shadow-blue-600/20">
                 <Store className="w-5 h-5" />
               </div>
               <span className="font-extrabold text-lg text-white tracking-tight">
@@ -66,7 +66,7 @@ export const Footer: React.FC<FooterProps> = ({
 
             {/* Social Media Placeholders */}
             <div>
-              <span className="text-[11px] font-bold text-slate-300 uppercase tracking-wider block mb-2.5">
+              <span className="text-xs font-semibold text-slate-300 block mb-2.5">
                 Redes Sociais (Demonstrativo):
               </span>
               <div className="flex items-center gap-2">
@@ -103,7 +103,7 @@ export const Footer: React.FC<FooterProps> = ({
 
           {/* Department Links (1 col) */}
           <div className="space-y-3">
-            <h4 className="text-white font-bold text-xs uppercase tracking-wider">
+            <h4 className="text-white font-semibold text-xs">
               Departamentos
             </h4>
             <ul className="space-y-2">
@@ -122,7 +122,7 @@ export const Footer: React.FC<FooterProps> = ({
 
           {/* Navigation Links (1 col) */}
           <div className="space-y-3">
-            <h4 className="text-white font-bold text-xs uppercase tracking-wider">
+            <h4 className="text-white font-semibold text-xs">
               Institucional
             </h4>
             <ul className="space-y-2">
@@ -154,7 +154,7 @@ export const Footer: React.FC<FooterProps> = ({
 
           {/* Contact Placeholders (1 col) */}
           <div className="space-y-3">
-            <h4 className="text-white font-bold text-xs uppercase tracking-wider">
+            <h4 className="text-white font-semibold text-xs">
               Dados de Demonstração
             </h4>
             <div className="space-y-2 text-[11px] leading-relaxed">

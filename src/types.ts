@@ -7,6 +7,8 @@ export interface Product {
   oldPrice?: number;
   image: string;
   badge?: 'Mais Vendido' | 'Oferta' | 'Destaque' | 'Novidade';
+  rating?: number;
+  reviewsCount?: number;
   refCode: string;
   description: string;
   features: string[];

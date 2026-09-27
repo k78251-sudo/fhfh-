@@ -264,7 +264,7 @@ export const EXTRA_PRODUCTS: Product[] = [
   },
   {
     id: 'prod-34',
-    name: 'Prato Giratório Lazy Susan em Acrílico 360 Graus 25cm',
+    name: 'Organizador Multiuso Giratório 360°',
     category: 'Organização',
     categorySlug: 'organizacao',
     price: 39.90,
